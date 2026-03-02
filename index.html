@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 32: Francisco Tomás</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;700&display=swap');
+
+        :root {
+            --neon-blue: #00d4ff;
+            --neon-pink: #ff007f;
+            --neon-green: #39ff14;
+            --gold: #ffd700;
+            --dark-space: #0b0e14;
+        }
+
+        body {
+            background-color: var(--dark-space);
+            color: white;
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .game-font { font-family: 'Press Start 2P', cursive; font-size: 11px; line-height: 1.5; }
+
+        .container {
+            max-width: 550px;
+            width: 92%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 3px solid var(--neon-blue);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px var(--neon-blue);
+            display: none;
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        .baby-img {
+            width: 100%;
+            max-width: 280px;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
+            margin: 20px 0;
+        }
+
+        button {
+            background: var(--neon-pink);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 9px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: var(--neon-green);
+            color: black;
+            box-shadow: 0 0 20px var(--neon-green);
+        }
+
+        .message-box {
+            text-align: left;
+            line-height: 1.6;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid var(--gold);
+            font-size: 16px;
+        }
+
+        .highlight { color: var(--gold); font-weight: bold; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .floating { animation: float 3s ease-in-out infinite; font-size: 30px; margin-top: 20px; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="screen1" class="card" style="display: block;">
+        <h1 class="game-font" style="color: var(--neon-pink);">NEW QUEST DETECTED</h1>
+        <h2 style="font-size: 2em; margin: 10px 0;">Francisco Tomás</h2>
+        <p class="game-font" style="color: var(--neon-blue); font-size: 8px;">Location: Gran Canaria, Spain 🇪🇸</p>
+        <p style="font-style: italic; margin-top: 20px;">"Scanning for bugs... No errors found. Player is 100% Guapo."</p>
+        <button onclick="nextScreen(1, 2)">START BIRTHDAY.EXE</button>
+    </div>
+
+    <div id="screen2" class="card">
+        <h2 class="game-font">THE ORIGIN STORY 🧬</h2>
+        <img src="https://ibb.co/4ZLnkDM2" alt="Baby Francisco Tomás" class="baby-img">
+        <p class="game-font" style="font-size: 10px; color: var(--neon-green);">
+            "This baby is not a baby anymore because he is 32 years old today."
+        </p>
+        <p>Already rocking that outfit like a main character!</p>
+        <button onclick="nextScreen(2, 3)">NEXT LEVEL</button>
+    </div>
+
+    <div id="screen3" class="card">
+        <h2 class="game-font" style="color: var(--neon-blue);">DEBUGGING MODE 💻</h2>
+        <p>I know you're feeling nervous about your exam this week, but remember:</p>
+        <p style="font-size: 1.2em; border-left: 3px solid var(--neon-green); padding-left: 10px;">
+            "You can trace even the tiniest problem in the codes you’re making for a game, so how much more can you handle an exam? Hehe."
+        </p>
+        <p class="game-font" style="color: var(--gold); margin-top:20px;">I BELIEVE IN YOU!</p>
+        <button onclick="nextScreen(3, 4)">OPEN FINAL REWARD</button>
+    </div>
+
+    <div id="screen4" class="card">
+        <h2 class="game-font" style="color: var(--neon-pink);">❤️ YOU WIN! ❤️</h2>
+        <div class="message-box">
+            <p><strong>Dear Francisco Tomás,</strong></p>
+            <p>Happy 32nd birthday to the most wonderfully nerdy guy from Gran Canaria, Spain!</p>
+            <p>I’m wishing you all the best in life and that you achieve every goal and dream you have. I truly admire how you take risks and go after what you want. Your courage inspires me to dream bigger and be brave about my own future. 💛</p>
+            <p><span class="highlight">Part of my future plan is to be with you</span> — building more and more beautiful memories together.</p>
+            <p><em>Parte de mi plan para el futuro es estar contigo — construyendo más y más recuerdos hermosos juntos.</em></p>
+            <p>And honestly… how can you be so guapo, gentle, and naughty at the same time? Haha.</p>
+            <p style="text-align: center; font-size: 1.5em; margin-top: 20px;"><strong>Te amo ❤️</strong></p>
+        </div>
+        <div class="floating">🐢🍄⚡🗝️</div>
+    </div>
+</div>
+
+<script>
+    function nextScreen(current, next) {
+        document.getElementById('screen' + current).style.display = 'none';
+        document.getElementById('screen' + next).style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
